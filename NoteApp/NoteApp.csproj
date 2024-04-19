@@ -51,12 +51,6 @@
     <Compile Include="Service\Validator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NoteAppUI\NoteAppUI.csproj">
-      <Project>{ea6b2499-77e8-4b4f-ac50-f2b86662980c}</Project>
-      <Name>NoteAppUI</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
