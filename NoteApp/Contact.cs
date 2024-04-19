@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace NoteApp
 {
-    public class Class1
+    internal class Contact
     {
+
     }
 }
