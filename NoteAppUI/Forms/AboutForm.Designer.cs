@@ -32,9 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.EmailLink = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.GitLink = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -75,15 +75,16 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Email";
             // 
-            // linkLabel1
+            // EmailLink
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(53, 150);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(129, 13);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "deikadei2003@gmail.com";
+            this.EmailLink.AutoSize = true;
+            this.EmailLink.Location = new System.Drawing.Point(53, 150);
+            this.EmailLink.Name = "EmailLink";
+            this.EmailLink.Size = new System.Drawing.Size(129, 13);
+            this.EmailLink.TabIndex = 4;
+            this.EmailLink.TabStop = true;
+            this.EmailLink.Text = "deikadei2003@gmail.com";
+            this.EmailLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.EmailLink_LinkClicked);
             // 
             // label5
             // 
@@ -94,16 +95,16 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "GitHub";
             // 
-            // linkLabel2
+            // GitLink
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(64, 177);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(161, 13);
-            this.linkLabel2.TabIndex = 6;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "github.com/MrDei110/Spo_var2";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.GitLink.AutoSize = true;
+            this.GitLink.Location = new System.Drawing.Point(64, 177);
+            this.GitLink.Name = "GitLink";
+            this.GitLink.Size = new System.Drawing.Size(197, 13);
+            this.GitLink.TabIndex = 6;
+            this.GitLink.TabStop = true;
+            this.GitLink.Text = "https://github.com/MrDei110/Spo_var2";
+            this.GitLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GitLink_LinkClicked);
             // 
             // label6
             // 
@@ -120,9 +121,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 281);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.GitLink);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.EmailLink);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -131,6 +132,7 @@
             this.Name = "AboutForm";
             this.ShowIcon = false;
             this.Text = "About";
+            this.Load += new System.EventHandler(this.AboutForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,9 +144,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel EmailLink;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel GitLink;
         private System.Windows.Forms.Label label6;
     }
 }

@@ -73,9 +73,29 @@ namespace NoteAppUI.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AddContactIconContrast_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("AddContactIconContrast_512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DeleteContactIcon_512x512 {
             get {
                 object obj = ResourceManager.GetObject("DeleteContactIcon 512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DeleteContactIconContrast_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("DeleteContactIconContrast_512x512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,16 @@ namespace NoteAppUI.Properties {
         internal static System.Drawing.Bitmap EditContactIconContrast_512x512 {
             get {
                 object obj = ResourceManager.GetObject("EditContactIconContrast 512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Warning_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("Warning_512x512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

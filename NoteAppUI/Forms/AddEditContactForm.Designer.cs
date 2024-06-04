@@ -73,6 +73,7 @@
             this.BirthdayDateTime.Name = "BirthdayDateTime";
             this.BirthdayDateTime.Size = new System.Drawing.Size(399, 20);
             this.BirthdayDateTime.TabIndex = 13;
+            this.BirthdayDateTime.ValueChanged += new System.EventHandler(this.BirthdayDateTime_ValueChanged);
             // 
             // VkTextBox
             // 
@@ -80,6 +81,7 @@
             this.VkTextBox.Name = "VkTextBox";
             this.VkTextBox.Size = new System.Drawing.Size(399, 20);
             this.VkTextBox.TabIndex = 11;
+            this.VkTextBox.TextChanged += new System.EventHandler(this.VkTextBox_TextChanged);
             // 
             // label7
             // 
@@ -131,6 +133,7 @@
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(399, 20);
             this.EmailTextBox.TabIndex = 9;
+            this.EmailTextBox.TextChanged += new System.EventHandler(this.EmailTextBox_TextChanged);
             // 
             // NameTextBox
             // 
@@ -138,6 +141,7 @@
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(399, 20);
             this.NameTextBox.TabIndex = 5;
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // label5
             // 
@@ -163,15 +167,18 @@
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.Size = new System.Drawing.Size(399, 20);
             this.PhoneTextBox.TabIndex = 7;
+            this.PhoneTextBox.TextChanged += new System.EventHandler(this.PhoneTextBox_TextChanged);
             // 
             // OkButton
             // 
+            this.OkButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.OkButton.Location = new System.Drawing.Point(319, 238);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(75, 23);
             this.OkButton.TabIndex = 15;
             this.OkButton.Text = "OK";
             this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // CancelButton
             // 
