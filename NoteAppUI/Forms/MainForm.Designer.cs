@@ -32,7 +32,11 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ControlPanelBox = new System.Windows.Forms.GroupBox();
             this.DeleteContactPicture = new System.Windows.Forms.PictureBox();
@@ -54,10 +58,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.PhoneTextBox = new System.Windows.Forms.TextBox();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BirthdayPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BirthdayWarningLabel = new System.Windows.Forms.Label();
+            this.BirthdayBoyLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -68,6 +72,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.EditContactPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddContactPicture)).BeginInit();
             this.PersonalInformationBox.SuspendLayout();
+            this.BirthdayPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -93,7 +99,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
@@ -107,6 +113,27 @@
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
             // 
+            // addContactToolStripMenuItem
+            // 
+            this.addContactToolStripMenuItem.Name = "addContactToolStripMenuItem";
+            this.addContactToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.addContactToolStripMenuItem.Text = "Add contact";
+            this.addContactToolStripMenuItem.Click += new System.EventHandler(this.AddContact_Click);
+            // 
+            // editContactToolStripMenuItem
+            // 
+            this.editContactToolStripMenuItem.Name = "editContactToolStripMenuItem";
+            this.editContactToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.editContactToolStripMenuItem.Text = "Edit contact";
+            this.editContactToolStripMenuItem.Click += new System.EventHandler(this.EditContactPicture_Click);
+            // 
+            // deleteContactToolStripMenuItem
+            // 
+            this.deleteContactToolStripMenuItem.Name = "deleteContactToolStripMenuItem";
+            this.deleteContactToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.deleteContactToolStripMenuItem.Text = "Delete contact";
+            this.deleteContactToolStripMenuItem.Click += new System.EventHandler(this.DeleteContactPicture_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -114,6 +141,13 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutMenuItem_Click);
             // 
             // splitContainer1
             // 
@@ -127,6 +161,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.BirthdayPanel);
             this.splitContainer1.Panel2.Controls.Add(this.PersonalInformationBox);
             this.splitContainer1.Size = new System.Drawing.Size(746, 427);
             this.splitContainer1.SplitterDistance = 267;
@@ -329,33 +364,43 @@
             this.PhoneTextBox.Size = new System.Drawing.Size(399, 20);
             this.PhoneTextBox.TabIndex = 7;
             // 
-            // aboutToolStripMenuItem
+            // BirthdayPanel
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutMenuItem_Click);
+            this.BirthdayPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BirthdayPanel.Controls.Add(this.BirthdayBoyLabel);
+            this.BirthdayPanel.Controls.Add(this.BirthdayWarningLabel);
+            this.BirthdayPanel.Controls.Add(this.pictureBox1);
+            this.BirthdayPanel.Location = new System.Drawing.Point(4, 229);
+            this.BirthdayPanel.Name = "BirthdayPanel";
+            this.BirthdayPanel.Size = new System.Drawing.Size(468, 191);
+            this.BirthdayPanel.TabIndex = 14;
             // 
-            // addContactToolStripMenuItem
+            // pictureBox1
             // 
-            this.addContactToolStripMenuItem.Name = "addContactToolStripMenuItem";
-            this.addContactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addContactToolStripMenuItem.Text = "Add contact";
-            this.addContactToolStripMenuItem.Click += new System.EventHandler(this.AddContact_Click);
+            this.pictureBox1.Image = global::NoteAppUI.Properties.Resources.Warning_512x512;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // editContactToolStripMenuItem
+            // BirthdayWarningLabel
             // 
-            this.editContactToolStripMenuItem.Name = "editContactToolStripMenuItem";
-            this.editContactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editContactToolStripMenuItem.Text = "Edit contact";
-            this.editContactToolStripMenuItem.Click += new System.EventHandler(this.EditContactPicture_Click);
+            this.BirthdayWarningLabel.AutoSize = true;
+            this.BirthdayWarningLabel.Location = new System.Drawing.Point(116, 55);
+            this.BirthdayWarningLabel.Name = "BirthdayWarningLabel";
+            this.BirthdayWarningLabel.Size = new System.Drawing.Size(129, 13);
+            this.BirthdayWarningLabel.TabIndex = 1;
+            this.BirthdayWarningLabel.Text = "Сегодня день рождения";
             // 
-            // deleteContactToolStripMenuItem
+            // BirthdayBoyLabel
             // 
-            this.deleteContactToolStripMenuItem.Name = "deleteContactToolStripMenuItem";
-            this.deleteContactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.deleteContactToolStripMenuItem.Text = "Delete contact";
-            this.deleteContactToolStripMenuItem.Click += new System.EventHandler(this.DeleteContactPicture_Click);
+            this.BirthdayBoyLabel.AutoSize = true;
+            this.BirthdayBoyLabel.Location = new System.Drawing.Point(252, 55);
+            this.BirthdayBoyLabel.Name = "BirthdayBoyLabel";
+            this.BirthdayBoyLabel.Size = new System.Drawing.Size(0, 13);
+            this.BirthdayBoyLabel.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -382,6 +427,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.AddContactPicture)).EndInit();
             this.PersonalInformationBox.ResumeLayout(false);
             this.PersonalInformationBox.PerformLayout();
+            this.BirthdayPanel.ResumeLayout(false);
+            this.BirthdayPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,5 +467,9 @@
         private System.Windows.Forms.ToolStripMenuItem editContactToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteContactToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Panel BirthdayPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label BirthdayBoyLabel;
+        private System.Windows.Forms.Label BirthdayWarningLabel;
     }
 }

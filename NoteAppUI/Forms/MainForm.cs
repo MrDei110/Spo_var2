@@ -44,7 +44,7 @@ namespace NoteAppUI
             Contacts = Serializer.LoadFromFile(Paths.PathToFiles);
             Contacts = Sorter.SortContacts(Contacts);
             UpdateContacts(Contacts);
-            //BirthdayBoyLabel.Text = Sorter.GetBirthdayBoys(Contacts, DateTime.Now);
+            BirthdayBoyLabel.Text = Sorter.GetBirthdayBoys(Contacts, DateTime.Now);
         }
 
         /// <summary>
